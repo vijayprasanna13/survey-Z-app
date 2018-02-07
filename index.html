@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Survey
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-clockpicker.min.css">
+</head>
+<style type="text/css">
+    body{
+        min-width: 100%;
+    }
+    .appliance-containter{
+        border: 1px solid black;
+        float: left;
+        max-width: 400px;
+        background-color: #ABB7B7;
+        padding: 20px;
+    }
+    .appliance-usage {
+        padding: 5px;
+        border: 1px solid black;
+        background-color: #ECF0F1;
+    }
+    #user-meta{
+        position: sticky;
+        border: 1px solid black;
+        padding: 20px;
+        background-color: #D2D7D3
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="survey">
+            <div class="col-sm-3" id="user-meta">
+              <div class="form-group">
+                <label for="residentName">Name</label>
+                <input type="text" class="form-control" id="residentName" aria-describedby="residentName">
+                <small class="form-text text-muted">The name of the resident</small>
+              </div>
+              <div class="form-group">
+                <label for="residentNumber">Number of residents</label>
+                <input type="integer" class="form-control" id="residentNumber" aria-describedby="residentNumber">
+                <small class="form-text text-muted">number of people in the household</small>
+              </div>
+              <div class="form-group">
+                <label for="residentAdultNumber">Number of adults</label>
+                <input type="integer" class="form-control" id="residentAdultNumber" aria-describedby="residentAdultNumber">
+                <small class="form-text text-muted">number of adults in the household</small>
+              </div>
+              <button class="btn btn-success" id="add-appliance">+ Add appliance</button>    
+              <button type="submit" id="submit-survey" class="btn btn-primary">Submit</button>
+            </div>
+            <div id="appliances" class="col-sm-8">
+        </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/bootstrap-clockpicker.min.js"></script>
+<script type="text/javascript" src="js/survey.js"></script>
+<script type="text/javascript">
+    $('.clockpicker').clockpicker();
+</script>
+</html>
